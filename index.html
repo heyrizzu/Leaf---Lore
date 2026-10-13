@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf & Lore Library</title>
+<link rel="stylesheet" href="mylibrarey.css">
+  <link rel="stylesheet" href="./library.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">📖 Leaf & Lore</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="./MYLIBARARYBOOK.HTML">Books</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h1>Discover Your Next Great Story</h1>
+
+        <p>
+            Welcome to Leaf & Lore Library.
+            Explore knowledge, imagination, and timeless stories
+            in our beautiful collection of books.
+        </p>
+
+        <a href="book.js" class="btn">Explore Books</a>
+    </section>
+
+    <!-- BOOK SECTION -->
+    <section class="section" id="books">
+
+        <h2>Explore Our Collection</h2>
+
+        
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by book title or author..."
+            >
+
+            <button onclick="searchBooks()">Search</button>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="categories">
+            <button class="category-btn" onclick="filterBooks('All')">
+                All
+            </button>
+
+            <button class="category-btn" onclick="filterBooks('Fiction')">
+                Fiction
+            </button>
+
+            <button class="category-btn" onclick="filterBooks('Science')">
+                Science
+            </button>
+
+            <button class="category-btn" onclick="filterBooks('History')">
+                History
+            </button>
+
+            <button class="category-btn" onclick="filterBooks('Technology')">
+                Technology
+            </button>
+        </div>
+
+   
+
+<script src="books.js" defer></script>
+```
+        <div class="books" id="bookList">
+            <div class="book-card"
+                 data-title="Linux Notes"
+                 data-author="Linus Torvalds"
+                 data-category="Code-X">
+
+                <div class="book-cover"> <img src="./img/images.jfif" alt="linux" width="200px"></div>
+
+                <h3>Linux</h3>
+
+                <p>Author: Linus Torvalds</p>
+
+                <p>Category: Code-X</p>
+
+                <a class="read-btn" href="./books/LinuxNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="Algoritham Notes"
+                 data-author="Muhammad ibn Musa al-Khwarizmi"
+                 data-category="Algoritham">
+
+                <div class="book-cover"><img src="./img/images (2).jfif" alt="algorithem" width="200px"></div>
+
+                <h3>Algoritham Notes</h3>
+
+                <p>Author: Muhammad ibn Musa al-Khwarizmi</p>
+
+                <p>Category: Algoritham</p>
+
+               <a class="read-btn" href="./books/AlgorithmsNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="CSS Notes"
+                 data-author="Hakon Wium Lie"
+                 data-category="Code-X">
+
+                <div class="book-cover"><img src="./img/images (3).jfif" alt="css" width="200px"></div>
+
+                <h3>CSS Notes</h3>
+
+                <p>Author: Hakon Wium Lie</p>
+
+                <p>Category: Code-X</p>
+
+               <a class="read-btn" href="./books/CSSNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="C++ Notes"
+                 data-author="Bjarne Stroustrup"
+                 data-category="Code-X">
+
+                <div class="book-cover"><img src="./img/images (5).jfif" alt="c++" width="200px"></div>
+
+                <h3>C++ Notes</h3>
+
+                <p>Author:Bjarne Stroustrup</p>
+
+                <p>Category: Code-X</p>
+
+                <a class="read-btn" href="/books/CPlusPlusNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="Java Script Notes"
+                 data-author="Brendan Eich"
+                 data-category="Code-X">
+
+                <div class="book-cover"><img src="./img/images (6).jfif" alt="javascript" width="200px"></div>
+
+                <h3>Java Script Notes</h3>
+
+                <p>Author: Brendan Eich</p>
+
+                <p>Category: Code-X</p>
+                  <a class="read-btn" href="./books/JavaScriptNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="Git Notes"
+                 data-author="Chris Wanstrath,Tom Preston-Werner,and P.J. Hyett"
+                 data-category="Code">
+
+                <div class="book-cover"><img src="./img/images (7).jfif" alt="git notes" width="200px"></div>
+
+                <h3>Git Notes</h3>
+
+                <p>Author:Chris Wanstrath,Tom Preston-Werner,and P.J. Hyett</p>
+
+                <p>Category: Code</p>
+
+                <a class="read-btn" href="./books/GitNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            No books found. Try another search.
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+
+        <h2>About Our Library</h2>
+
+        <p>
+            Leaf & Lore Library is a digital library concept
+            designed to help readers explore books and discover
+            new ideas. Our goal is to make reading accessible,
+            enjoyable, and inspiring for everyone.
+        </p>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Your City, India</p>
+        <p>📧 Email: info@leafandlore.com</p>
+        <p>📞 Phone: +91 00000 00000</p>
+
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Leaf & Lore Library.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const searchInput = document.getElementById("searchInput");
+        const bookCards = document.querySelectorAll(".book-card");
+        const noResults = document.getElementById("noResults");
+
+        // SEARCH BOOKS
+        function searchBooks() {
+
+            const searchText = searchInput.value.toLowerCase().trim();
+
+            let found = 0;
+
+            bookCards.forEach(card => {
+
+                const title = card.dataset.title.toLowerCase();
+                const author = card.dataset.author.toLowerCase();
+
+                if (
+                    title.includes(searchText) ||
+                    author.includes(searchText)
+                ) {
+
+                    card.style.display = "block";
+                    found++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+            noResults.style.display =
+                found === 0 ? "block" : "none";
+
+        }
+
+        // SEARCH WHILE TYPING
+        searchInput.addEventListener("input", searchBooks);
+
+        // FILTER BOOKS BY CATEGORY
+        function filterBooks(category) {
+
+            searchInput.value = "";
+
+            let found = 0;
+
+            bookCards.forEach(card => {
+
+                const bookCategory = card.dataset.category;
+
+                if (
+                    category === "All" ||
+                    bookCategory === category
+                ) {
+
+                    card.style.display = "block";
+                    found++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+            noResults.style.display =
+                found === 0 ? "block" : "none";
+
+        }
+
+        // VIEW BOOK
+        function showBook(bookName) {
+
+            alert(
+                "You selected: " + bookName +
+                "\n\nBook details will be available soon."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>

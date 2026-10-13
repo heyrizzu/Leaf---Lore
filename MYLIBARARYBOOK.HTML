@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leaf & Lore</title>
+
+<link rel="stylesheet" href="mylibrarey.css">
+</head>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, serif;
+        }
+
+        body {
+            background: #11110f;
+            color: #f5ead5;
+        }
+
+        header {
+            background: #191814;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #4c3b20;
+        }
+
+        .logo {
+            color: #d4af67;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #e8dcc4;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d4af67;
+        }
+
+        .hero {
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background:
+                linear-gradient(
+                    rgba(17, 17, 15, 0.8),
+                    rgba(17, 17, 15, 0.95)
+                ),
+                url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #e4c486;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #d1c6b0;
+            font-size: 18px;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: #c29a52;
+            color: #17130d;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background: #e2c17f;
+        }
+
+        .section {
+            padding: 55px 8%;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #d4af67;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #63502e;
+            background: #211f1a;
+            color: white;
+            outline: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 15px;
+        }
+
+        .search-box button {
+            padding: 15px 22px;
+            background: #c29a52;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            font-weight: bold;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            border: 1px solid #65502c;
+            border-radius: 20px;
+            background: #211f1a;
+            color: #e4c486;
+            cursor: pointer;
+        }
+
+        .category-btn:hover {
+            background: #c29a52;
+            color: #11110f;
+        }
+
+        .books {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .book-card {
+            background: #211f1a;
+            padding: 25px;
+            border: 1px solid #40351f;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            border-color: #c29a52;
+        }
+
+        .book-cover {
+            height: 180px;
+            background: #3a3020;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 55px;
+            border-radius: 5px;
+            margin-bottom: 18px;
+        }
+
+        .book-card h3 {
+            color: #e4c486;
+            margin-bottom: 10px;
+        }
+
+        .book-card p {
+            color: #bcb3a1;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .book-card .read-btn {
+            padding: 2px 10px;
+            margin-top: 14px;
+            background: transparent;
+            color: #d4af67;
+            border: 1px solid #c29a52;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .book-card .read-btn:hover {
+            background: #c29a52;
+            color: #11110f;
+        }
+
+        .about {
+            background: #191814;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #c5bba8;
+            line-height: 1.8;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            color: #c5bba8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0b0b09;
+            border-top: 1px solid #40351f;
+            color: #998b70;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #c5bba8;
+            padding: 20px;
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .search-box input {
+                min-width: 0;
+            }
+
+            .section {
+                padding: 40px 5%;
+            }
+        }
+        img{
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            width: 200px;
+        }
+    </style>
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <h1>📚 Leaf & Lore</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="./MYLIBARARYBOOK.HTML">Books</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+   
+
+
+    <!-- Books -->
+
+    <section id="books" class="books-section">
+
+        <h2>Our Books</h2>
+
+          <!-- BOOK CARDS -->
+        <div class="books" id="bookList">
+            <div class="book-card"
+                 data-title="Linux Notes"
+                 data-author="Linus Torvalds"
+                 data-category="Code-X">
+
+                 <div class="book-cover"> <img src="./img/images.jfif" alt="linux"></div>
+
+                <h3>Linux</h3>
+
+                <p>Author: Linus Torvalds</p>
+
+                <p>Category: Code-X</p>
+
+                <a class="read-btn" href="./books/LinuxNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="Algoritham Notes"
+                 data-author="Muhammad ibn Musa al-Khwarizmi"
+                 data-category="Algoritham">
+
+            <div class="book-cover"><img src="./img/images (2).jfif" alt="algorithem"></div>
+
+                <h3>Algoritham Notes</h3>
+
+                <p>Author: Muhammad ibn Musa al-Khwarizmi</p>
+
+                <p>Category: Algoritham</p>
+
+               <a class="read-btn" href="/books/AlgorithmsNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="CSS Notes"
+                 data-author="Hakon Wium Lie"
+                 data-category="Code-X">
+
+                <div class="book-cover"><img src="./img/images (3).jfif" alt="css"></div>
+
+
+                <h3>CSS Notes</h3>
+
+                <p>Author: Hakon Wium Lie</p>
+
+                <p>Category: Code-X</p>
+
+               <a class="read-btn" href="./books/CSSNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="C++ Notes"
+                 data-author="Bjarne Stroustrup"
+                 data-category="Code-X">
+
+               <div class="book-cover"><img src="./img/images (5).jfif" alt="c++"></div>
+
+                <h3>C++ Notes</h3>
+
+                <p>Author:Bjarne Stroustrup</p>
+
+                <p>Category: Code-X</p>
+
+                <a class="read-btn" href="./books/CPlusPlusNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="Java Script Notes"
+                 data-author="Brendan Eich"
+                 data-category="Code-X">
+
+                                <div class="book-cover"><img src="./img/images (6).jfif" alt="javascript" width="200px"></div>
+
+                <h3>Java Script Notes</h3>
+
+                <p>Author: Brendan Eich</p>
+
+                <p>Category: Code-X</p>
+                  <a class="read-btn" href="./books/JavaScriptNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+            <div class="book-card"
+                 data-title="Git Notes"
+                 data-author="Chris Wanstrath,Tom Preston-Werner,and P.J. Hyett"
+                 data-category="Code">
+
+                <div class="book-cover"><img src="./img/images (7).jfif" alt="git notes"></div>
+
+
+                <h3>Git Notes</h3>
+
+                <p>Author:Chris Wanstrath,Tom Preston-Werner,and P.J. Hyett</p>
+
+                <p>Category: Code</p>
+
+                <a class="read-btn" href="./books/GitNotesForProfessionals.pdf">View Book</a>
+                
+            </div>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            No books found. Try another search.
+        </div>
+
+    </section>
+
+
+   
+
+   
+    
+    <hr>
+
+    <section>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get updates on new arrivals and exclusive offers.</p>
+
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+     <!-- About -->
+
+    <section id="about" class="about">
+
+        <h2>About Our Library</h2>
+
+        <p>
+            Our library is a place where people can read books,
+            gain knowledge and explore new ideas.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: mylibrary@example.com</p>
+
+        <p>Location: India</p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 My Library</p>
+
+    </footer>
+
+</body>
+</html>

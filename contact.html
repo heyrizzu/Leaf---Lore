@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contact.css
+    ">
+</head>
+<body>
+     <header>
+        <h1>📚 Leaf & Lore</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="./MYLIBARARYBOOK.HTML">Books</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    
+<!-- CONTACT SECTION -->
+<section class="section contact" id="contact">
+
+    <div class="contact-heading">
+        <span class="contact-subtitle">WE WOULD LOVE TO HEAR FROM YOU</span>
+        <h2>Get In Touch</h2>
+        <p>
+            Have a question, suggestion, or book recommendation?
+            Send us a message. We are always happy to connect
+            with fellow book lovers.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+
+            <h3>Let's Connect</h3>
+            <p class="info-description">
+                Every great conversation begins with a simple hello.
+                Reach out to Leaf & Lore Library.
+            </p>
+
+            <div class="contact-item">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h4>Email Us</h4>
+                    <a href="mailto:info@leafandlore.com">
+                        info@leafandlore.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">☎</div>
+                <div>
+                    <h4>Call Us</h4>
+                    <a href="tel:+910000000000">
+                        +91 00000 00000
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">⌖</div>
+                <div>
+                    <h4>Our Location</h4>
+                    <p>Your City, India</p>
+                </div>
+            </div>
+
+            <div class="contact-note">
+                <span>📚</span>
+                <p>
+                    "A library is not just a place for books,
+                    but a home for ideas."
+                </p>
+            </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form-box">
+
+            <h3>Send Us a Message</h3>
+
+            <form id="contactForm">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Your Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What would you like to discuss?"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="contact-btn">
+                    Send Message <span>→</span>
+                </button>
+
+                <p id="formStatus" class="form-status"
+                   role="status" aria-live="polite"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
