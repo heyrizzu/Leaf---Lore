@@ -1,298 +1,246 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color:#11110f;
-    color: #3b2a20;
+    background-color: #11110f;
+    color: #f5eee2;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-
-header {
-    background: linear-gradient(135deg, #11110f,#3b2a20 );
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Navigation Bar */
+.navbar {
+    height: 70px;
+    background-color: #191814;
+    border-bottom: 1px solid #403521;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4.2%;
 }
 
-header h1 {
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-nav a {
-            color: #e8dcc4;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 15px;
-        }
-
-        nav a:hover {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
             color: #d4af67;
-        }
-
-
-.about-section {
-    padding: 75px 7%;
-    background: #11110f;
-    color: #f5ead5;
-    overflow: hidden;
-}
-
-/* Heading */
-.about-heading {
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.about-tag {
-    display: inline-block;
-    padding: 9px 18px;
-    border: 1px solid #70572e;
-    border-radius: 30px;
-    color: #d4af67;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.about-heading h2 {
-    margin: 20px 0 12px;
-    font-size: clamp(32px, 4vw, 48px);
-    color: #f5ead5;
-}
-
-.about-heading h2 span {
-    color: #d4af67;
-    font-style: italic;
-}
-
-.about-heading > p {
-    color: #bcb3a1;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-/* Main Layout */
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 55px;
-    max-width: 1200px;
-    margin: 0 auto 70px;
-}
-
-/* Image */
-.about-image {
-    position: relative;
-    padding: 10px;
-    border: 1px solid #c29a52;
-    border-radius: 14px;
-    background: #211f1a;
-}
-
-.about-image img {
-    display: block;
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.image-badge {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    padding: 13px 18px;
-    background: #c29a52;
-    color: #17130d;
-    border-radius: 5px;
-    font-size: 12px;
+    
+    font-family: Arial, sans-serif;
+    font-size: 36px;
     font-weight: bold;
-    letter-spacing: 1px;
-}
-
-/* Content */
-.small-heading {
-    color: #d4af67;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.about-content h3 {
-    margin: 18px 0;
-    font-size: clamp(26px, 3vw, 36px);
-    line-height: 1.4;
-    color: #f5ead5;
-}
-
-.about-content h3 span {
-    color: #d4af67;
-}
-
-.about-content p {
-    margin-bottom: 15px;
-    color: #c5bba8;
-    font-size: 15px;
-    line-height: 1.9;
-}
-
-/* Button */
-.about-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 12px;
-    padding: 14px 22px;
-    background: #c29a52;
-    color: #17130d;
     text-decoration: none;
-    border-radius: 5px;
+}
+
+.book-icon {
+    font-size: 32px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+
+.navbar nav a {
+    color: #f5eee2;
+    font-size: 17px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #e7b75e;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 6.4% 50px;
+}
+
+.about-heading {
+    max-width: 780px;
+    margin: 0 auto 54px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #d9a84e;
     font-size: 14px;
     font-weight: bold;
-    transition: 0.3s ease;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
 }
 
-.about-btn:hover {
-    background: #e4c486;
-    transform: translateY(-3px);
+.about-heading h1 {
+    color: #e7b75e;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
-.about-btn span {
-    font-size: 20px;
+.intro {
+    color: #e4d9c8;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
-/* Feature Cards */
-.about-features {
+/* About Cards */
+.about-container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    max-width: 1300px;
-    margin: 0 auto 55px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .about-card {
-    padding: 28px 20px;
-    text-align: center;
-    background: #1c1b16;
-    border: 1px solid #40351f;
-    border-radius: 10px;
-    transition: 0.3s ease;
+    background-color: #191814;
+    border: 1px solid #493a24;
+    border-radius: 14px;
+    padding: 32px 28px;
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .about-card:hover {
     transform: translateY(-6px);
-    border-color: #c29a52;
-    background: #242117;
+    border-color: #d9a84e;
 }
 
-.about-icon {
+.card-icon {
+    width: 55px;
+    height: 55px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 62px;
-    height: 62px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    background: #30291c;
-    border: 1px solid #70572e;
+    justify-content: center;
+    background-color: #292319;
+    border: 1px solid #6b512a;
+    border-radius: 10px;
     font-size: 27px;
+    margin-bottom: 22px;
 }
 
-.about-card h3 {
-    margin-bottom: 12px;
-    color: #e4c486;
-    font-size: 18px;
+.about-card h2 {
+    color: #e7b75e;
+    font-size: 27px;
+    margin-bottom: 18px;
 }
 
 .about-card p {
-    color: #bcb3a1;
-    font-size: 14px;
-    line-height: 1.8;
+    color: #e0d5c5;
+    font-size: 16px;
+    line-height: 1.9;
 }
 
-/* Quote Banner */
-.about-quote {
-    max-width: 1300px;
-    margin: auto;
-    padding: 30px 25px;
+/* Quote Section */
+.quote-section {
+    margin-top: 45px;
+    padding: 42px 20px;
     text-align: center;
-    background: linear-gradient(
-        120deg,
-        #19372a,
-        #25251b,
-        #19372a
-    );
-    border: 1px solid #65502c;
-    border-radius: 10px;
+    background-color: #191814;
+    border: 1px solid #493a24;
+    border-radius: 14px;
 }
 
 .quote-mark {
-    display: block;
-    color: #d4af67;
-    font-size: 52px;
-    line-height: 1;
+    color: #e7b75e;
+    font-size: 58px;
+    height: 48px;
 }
 
-.about-quote p {
-    color: #f5ead5;
-    font-family: Georgia, serif;
-    font-size: clamp(18px, 2.5vw, 24px);
-    font-style: italic;
-    line-height: 1.7;
+.quote-section h2 {
+    color: #e7b75e;
+    font-size: 30px;
+    margin: 15px 0;
 }
 
-.quote-author {
-    display: block;
-    margin-top: 15px;
-    color: #d4af67;
-    font-size: 12px;
-    letter-spacing: 1px;
+.quote-section p:not(.quote-mark) {
+    color: #e0d5c5;
+    font-size: 17px;
+    margin-bottom: 25px;
 }
 
-/* Tablet */
-@media (max-width: 950px) {
+.explore-btn {
+    display: inline-block;
+    background-color: #d9a84e;
+    color: #17140e;
+    padding: 13px 27px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #f0c977;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid #403521;
+    color: #bdb09c;
+    background-color: #191814;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
     .about-container {
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-features {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .navbar nav {
+        gap: 25px;
     }
 
-    .about-image img {
-        height: 300px;
+    .logo {
+        font-size: 28px;
     }
 }
 
-/* Mobile */
-@media (max-width: 650px) {
+@media (max-width: 600px) {
+    .navbar {
+        height: auto;
+        padding: 22px 5%;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .navbar nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav a {
+        font-size: 15px;
+    }
+
     .about-section {
-        padding: 45px 5%;
+        padding: 55px 5% 35px;
     }
 
-    .about-heading {
-        margin-bottom: 35px;
+    .about-heading h1 {
+        font-size: 32px;
+    }
+
+    .intro {
+        font-size: 16px;
     }
 
     .about-container {
         grid-template-columns: 1fr;
-        gap: 35px;
-        margin-bottom: 45px;
-    }
-
-    .about-image img {
-        height: 250px;
-    }
-
-    .about-features {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin-bottom: 35px;
     }
 
     .about-card {
-        padding: 24px 20px;
+        padding: 25px 22px;
     }
 
-    .about-quote {
-        padding: 25px 18px;
+    .quote-section h2 {
+        font-size: 25px;
     }
 }
